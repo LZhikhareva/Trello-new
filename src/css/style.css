@@ -1,0 +1,128 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --item-width: 188px;
+    --item-heigth: 35px;
+    --column-width: 200px;
+}
+
+body {
+    padding: 30px;
+    color: #333;
+}
+
+.board {
+    display: flex;
+}
+
+.column {
+    background-color: white;
+    border: 1px dotted #ccc;
+    border-radius: 5px;
+    padding: 5px;
+    width: var(--column-width);
+}
+
+.board-column-header {
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+    cursor: move;
+}
+
+.board-column-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.board-item {
+    position: relative;
+    padding: 7px;
+    border: 1px dotted #9ecda8;
+    border-radius: 5px;
+    background-color: #efffde;
+    cursor: move;
+    font-size: 20px;
+    margin-bottom: 0.5em;
+    width: var(--item-width);
+    height: var(--item-heigth);
+}
+
+.board-item:hover .delete {
+    display: block;
+}
+
+.board-item-content {
+    pointer-events: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+.placeholder {
+    background-color: rgb(214, 214, 214);
+    margin-bottom: 0.5em;
+    width: var(--item-width);
+    height: var(--item-heigth);
+}
+
+.emptySectionHiddenLesson {
+    background: none;
+    border: none;
+    width: var(--item-width);
+    height: var(--item-heigth);
+}
+
+.placeholder-column {
+    background-color: rgb(214, 214, 214);
+    width: var(--column-width);
+    border: none;
+    margin-right: 20px;
+    padding: 5px;
+}
+
+.delete {
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    
+}
+
+.delete {
+    display: none;
+    margin-left: auto;
+    margin-top: -25px;
+    width: 20px;
+    height: 20px;
+}
+
+.add {
+    margin-top: 0.5em;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.new-item-input {
+    width: var(--item-width);
+    height: var(--item-heigth);
+    padding: 7px;
+    border: 1px dotted #9ecda8;
+    border-radius: 5px;
+}
+
+.ok-button {
+    margin-top: 0.3em;
+    height: var(--item-heigth);
+    background-color: #9ecda8;
+    border: 1px dotted #9ecda8;
+    border-radius: 5px;
+    cursor: pointer;
+}
